@@ -28,6 +28,7 @@ header{
 .enlaces>a:hover{
     border-bottom-color: #FF1429;
     letter-spacing: 2px;
+    cursor: alias;
 }
 
 
@@ -44,4 +45,113 @@ header{
 /**BODY**/
 body{
     background-color: #000;
+}
+
+
+/* CONTENEDOR PRINCIPAL DEL SCROll*/
+.conten_principal{
+    position: static;
+    display: flex;
+    overflow-x: scroll;
+    z-index: -1;
+    top: 50px;
+    width: 100%;
+}
+
+
+/*contenido de cada lugar del scroll*/
+.contenido{
+    min-width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    width: 100%;
+    height: 500px;
+}
+.contenido>img{
+    height: 100%;
+    object-fit: cover;
+}
+.informacion{
+    margin-left: 2%;
+    color: #fff;
+}
+.informacion>h1{
+    font-family: 'Acme', sans-serif;
+}
+.boton_comprar{
+    position: absolute;
+    margin: 50px 0px 50px 5px;
+    border-radius: 30px;
+    width: 150px;
+    height: 40px;
+    background-color:#FF1429;
+    font-family: 'Acme', sans-serif;
+}
+.boton_comprar:hover{
+    height: 50px;
+    border-color: #FF1429 ;
+    background-color: #fff;
+    color:#FF1429 ;
+    cursor: alias;
+    -webkit-box-shadow: 0px 0px 43px 10px rgba(255,20,41,1);
+    -moz-box-shadow: 0px 0px 43px 10px rgba(255,20,41,1);
+    box-shadow: 0px 0px 43px 10px rgba(255,20,41,1);
+
+}
+/*FIN-CONTENIDO*/
+
+/* CONTENEDOR GRID*/
+.contenedor_grid{
+    position: static;
+    /*background-color: crimson;/*removible*/
+}
+
+.titulo_grid{
+    color: #fff;
+    text-align: center;
+    font-family: 'Acme', sans-serif;
+}
+
+/*Grid Productos*/
+.Grid_productos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-rows: repeat(auto-fill,minmax(200px,320px));
+    grid-auto-rows: 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: dense;
+    grid-gap: 5px ;
+}
+.producto{
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    /*background-color: darkblue;/*removible*/
+    justify-content: space-between;
+    padding: 3px;
+}
+.informacion_producto{
+    /*background-color:darkgray;/*removible*/
+    color: #fff;
+    padding-left: 5px;
+}
+
+.informacion_producto>h1{
+    font-family: 'Acme', sans-serif;
+}
+
+.bt_caja{
+    display: flex;
+    position: static;
+    justify-content: center;
+    align-items: center;
+    top: 100%;
+    width: 100%;
+    height: 50px;
+    /*background-color: darkcyan;/*removible*/
+}
+.bt_caja>button{
+    position: static;
+    margin:0px 0px 0px 0px;
 }
